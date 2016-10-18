@@ -11,11 +11,11 @@ For most projects under version control (Git). All workflows operation following
 7. git checkout devB (devB’s branch)
 8. If you don’t have devB branch create one as for devA above and checkout (git branch devB and then git checkout devB)
 9. Pull devB branch(git pull origin devB)
-Move back to your working branch git checkout yourbranch
-Merge devB’s branch into your own git merge devB
-RESOLVE ALL CONFLICTS AT THIS STAGE - VERY IMPORTANT
-git checkout dev
-git pull origin dev
-Merge your working branch into dev (git merge yourbranch)
-Push merged dev branch (git push origin dev)
-All branches should be synced at this point and testing by the merger should happen before any next steps are taken.
+10. Move back to your working branch git checkout yourbranch
+11. Merge devB’s branch into your own git merge devB
+12. RESOLVE ALL CONFLICTS AT THIS STAGE - VERY IMPORTANT
+13. git checkout dev
+14. git pull origin dev
+15. Merge your working branch into dev (git merge yourbranch)
+16. Push merged dev branch (git push origin dev)
+17. All branches should be synced at this point and testing by the merger should happen before any next steps are taken.
