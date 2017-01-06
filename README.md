@@ -19,3 +19,25 @@ For most projects under version control (Git). All workflows operation following
 15. Merge your working branch into dev (git merge yourbranch)
 16. Push merged dev branch (git push origin dev)
 17. All branches should be synced at this point and testing by the merger should happen before any next steps are taken.
+
+#### Scenario | Dev -> Staging Deployment
+16. On mergers machine, git checkout staging
+17. git merge dev, Resolve any conflicts if any
+18. git push origin staging
+19. SSH onto the staging server and move into the working directory for that project
+    Note: some projects differ from one another, so it may be best to identify this workflow on a per-project basis
+20. Cd to ‘default’ directory
+21. git pull origin staging
+22. Staging should now be launched. It is typical that you may need to run a composer update on push, but that it usual on a per-deployment basis. 
+
+
+#### Scenario | Staging -> Master Deployment
+
+23. On mergers machine, git checkout master
+24. git merge dev or staging. Either or does not matter as they should be the EXACT same at this point
+25. SSH to Production server
+26. Cd to ‘default’ directory
+27. git pull origin master
+    a) For SAR, their production environment is managed through a continuous deployment tool called Envoyer.
+    b) The credentials for this service are in our lastpass account
+    c)Once logged in, go to the Sons Of The American Revolution project and click the deploy button. Typical deployment for this site is roughly 93 seconds.
