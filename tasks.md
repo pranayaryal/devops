@@ -16,7 +16,7 @@ provide a copy of the letters of Linda.
 3. Edit Donor - Selected User is current one logged in.
 4. Check to see if the members database is in sync with SAR’s and what it will take to get that up to speed.
 5. check and see if the thank you letters go out automatically.
-6. Maturity Date on Reporting , the time can come off.
+6. Maturity Date on Reporting , the time can come off - Done (Pranay Aryal)
 7. Letter Generator checkbox onclick, the same user’s checkboxes are clicked.
 8. When going to open pledges tab on reporting, the start date should go away or become blank
 9. Report CSV Exports should include all available fields
