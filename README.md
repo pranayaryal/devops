@@ -45,7 +45,11 @@ For most projects under version control (Git). All workflows operation following
     
 #### Installing sec panel
 sudo apt-get update
+
+
 sudo apt-get install secpanel
+
+
 Host should be 'forge'
 User is the ip address
 Identity - click the browse button and select ~/.ssh/id_rsa
