@@ -41,3 +41,30 @@ For most projects under version control (Git). All workflows operation following
     a) For SAR, their production environment is managed through a continuous deployment tool called Envoyer.
     b) The credentials for this service are in our lastpass account
     c)Once logged in, go to the Sons Of The American Revolution project and click the deploy button. Typical deployment for this site is roughly 93 seconds.
+    
+    
+#### Installing sec panel
+sudo apt-get update
+sudo apt-get install secpanel
+Host should be 'forge'
+User is the ip address
+Identity - click the browse button and select ~/.ssh/id_rsa
+
+Leave ipv4 and ssh2 radio button checked
+
+Go to the button with 'Lock' icon
+Select Add identity
+Select ~/.ssh/id_rsa.pub
+
+Click 'Launch Agent'
+
+Set up your ssh key in Laravel Forge
+Make sure that your ssh keys are named differently, even though they may be the sam
+To get your ssh key open your terminal and type cat ~/.ssh/id_rsa.pub
+Copy the output and paste inside Forge
+
+In your secpanel select the branch and then click Connect
+A new terminal will open up once you are logged in
+
+
+
