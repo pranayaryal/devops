@@ -21,4 +21,15 @@ If bitbucket says 'the key has been used by another user':
 
 #### Forge/Laravel error 'could not load dynamic library ../mysql.so'
 1. For Ubuntu 16.04, go to /etc/php/7.0/cli/php.ini
-2. Uncomment (by placing a semicolon in frong) the lines which load those libraries
+2. Uncomment (by placing a semicolon in front) the lines which load those libraries
+
+### If you get a 500 error
+1. Go to the forge terminal
+2. Do composer install
+3. Do php artisan migrate
+4. Check your .env file in forge for database login credentials.
+5. Check /var/log/nginx/error.log for any error
+6. Make sure the nginx file has  fastcgi_pass unix:/run/php/php7.0-fpm.sock 
+7. If it was php5.0-sock, change it to php7.0.sock
+8. For laravel project make sure you have done sudo chmod 777 -R for database/, bootstrap/, and storage/ directories
+9. Make sure your folder under root in nginx file points to the proper public/ directory for laravel
