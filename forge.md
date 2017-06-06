@@ -17,3 +17,8 @@ If bitbucket says 'the key has been used by another user':
 3. Type cat ~/.ssh/id_rsa.pub
 4. Copy this new ssh key and paste it in bitbucket as mentioned above
 5. You should be good after this.
+
+
+#### Forge/Laravel error 'could not load dynamic library ../mysql.so'
+1. For Ubuntu 16.04, go to /etc/php/7.0/cli/php.ini
+2. Uncomment (by placing a semicolon in frong) the lines which load those libraries
